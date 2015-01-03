@@ -1,4 +1,4 @@
 sdsdkkk.github.io
 =================
 
-A GitHub page, still don't know exactly what should I use it for.
+A GitHub page, seems like it will work as a blog on programming and computer stuff.
