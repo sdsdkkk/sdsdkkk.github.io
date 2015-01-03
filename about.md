@@ -11,7 +11,7 @@ He also has other blogs on programming and computer stuff:
 * [echo $TITLE][sdsdkkk]
 * [Twisted Cable][utwistedp]
 
-But it seems that this blog will be maintained more frequently, as the flexibility of Jekyll beats WordPress for a programmer.
+But it seems that this blog will be used for longer posts on programming with lots of snippets, as the flexibility of Jekyll beats WordPress for a programmer.
 
 [sdsdkkk]:             http://sdsdkkk.wordpress.com
 [utwistedp]:           http://utwistedp.wordpress.com
