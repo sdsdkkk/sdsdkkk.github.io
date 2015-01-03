@@ -1,8 +1,8 @@
 # Site settings
-title: Some Title
+title: Keyboard Noises
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  I'm just trying out Jekyll, this site will be empty for a while
+  Edwin Tunggawan is a computer hobbyist, and by his laziness he ended up with sdsdkkk as his Twitter username. But it's used in his later accounts in other sites, as he's too lazy to think for another name.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sdsdkkk.github.io" # the base hostname & protocol for your site
 twitter_username: sdsdkkk
