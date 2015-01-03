@@ -41,5 +41,7 @@ Since lots of my posts will be on programming stuff, I think moving to Jekyll mi
 
 I think the Jekyll is good since it doesn't require the usage of any DBMS. It might be a bit troublesome to keep track of the posts after some time, since each post need its own separate markdown file. But I'll see about it later.
 
+Jekyll is pretty cool. I wonder why I didn't start using it sooner, as I already used Jekyll when documenting an API in my office. It's pretty cool for code snippets and lots of programming-related stuff.
+
 [WordPress]:             http://wordpress.com
 [RandomNumberGuesser]:   http://sdsdkkk.wordpress.com/2015/01/01/haskell-random-number-guesser/
