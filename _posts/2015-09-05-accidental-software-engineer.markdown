@@ -12,7 +12,7 @@ Maybe I have too many things happening in my life by accident. I considered myse
 
 Fortunately, most of them ended up alright. While being a master's student wasn't as enjoyable as being a software engineer, I learned some good things there.
 
-I guess too many things happening in my life are by accident. And that sums up the introductory post for this blog. Here's a piece of "Hello World" code.
+At least the accidents aren't so bad, some of them are quite good. And that sums up the introductory post for this blog. Here's a piece of "Hello World" code.
 
 ```scala
 object Main {
