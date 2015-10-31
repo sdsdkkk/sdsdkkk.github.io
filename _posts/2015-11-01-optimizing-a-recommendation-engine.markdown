@@ -108,7 +108,7 @@ In short, the recommendation serving steps turned from this:
 ```
 request for entity X
   |> fetch recommendation record for entity X
-      |> serve recommendation
+       |> serve recommendation
 ```
 
 To this:
