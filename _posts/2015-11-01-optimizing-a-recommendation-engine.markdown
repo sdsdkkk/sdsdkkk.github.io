@@ -124,7 +124,7 @@ request for entity X
 
 The recommendation from the engine implementing this might not be very personalized, as it recommends for a group of entities instead of only one entity. But as long as the recommendation is relevant to the users' interest, this shouldn't be a big deal.
 
-The other problem will be balancing the recommendation results. So far, I haven't think about it to the extent where the system can give a balanced recommendation result from the recommended cluster of items.
+The other problem would be balancing the recommendation results. So far, I haven't thought about it to the extent where the system can give a balanced recommendation result from the recommended cluster of items.
 
 We can randomize the items from the recommended cluster or we can recommend top items from the recommended cluster. The possibility of users within the same cluster have different preferences is pretty high.
 
