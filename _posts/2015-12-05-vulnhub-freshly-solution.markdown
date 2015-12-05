@@ -66,7 +66,7 @@ The addresses I scanned with Nikto are as follows:
 - 192.168.0.104:8080
 - 192.168.0.104:8080/wordpress
 
-Here's the finding from Nikto (I threw away the false positives).
+Here are the findings from Nikto (I threw away the false positives).
 
 #### 1. 192.168.0.104
 
@@ -112,7 +112,7 @@ After some googling on this `hello.php` file on WordPress, I found out that it b
 
 ### Gaining Access
 
-For `/login.php`, I'm using sqlmap to exploit the SQL injection vulnerability. Since it's a POST request and it's a bit bothersome to manually craft a POST request in sqlmap, I use BurpSuite to interrupt the POST request and put the content in a file called `request.txt`.
+For `/login.php`, I'm using sqlmap to exploit the SQL injection vulnerability. Since it's a POST request and it's a bit bothersome to manually craft a POST request in sqlmap, I use Burp Suite to interrupt the POST request and put the content in a file called `request.txt`.
 
 ```
 POST /login.php HTTP/1.1
@@ -187,7 +187,7 @@ The Hello Dolly plugin will show a random line from a Louis Armstrong's song [He
 
 ![Screenshot-06](/assets/images/posts/freshly-wordpress-03.png)
 
-We can modify what it prints by editing the plugin. Change the content of the `hello_dolly_get_lyric()` with the following.
+We can modify what it prints by editing the plugin. Change the content of `hello_dolly_get_lyric()` with the following.
 
 ```php
 function hello_dolly_get_lyric() {
