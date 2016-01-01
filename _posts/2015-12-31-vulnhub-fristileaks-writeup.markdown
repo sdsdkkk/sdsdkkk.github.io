@@ -354,7 +354,7 @@ drwxr-xr-x. 19 root      root      4.0K Nov 19 01:41 ..
 drwxrwxr-x.  2 fristigod fristigod 4.0K Nov 25 05:53 .secret_admin_stuff
 ```
 
-That .secret_admin_stuff directory seems interesting. I changed the directory and checked what's inside.
+That `.secret_admin_stuff` directory seems interesting. I changed the directory and checked what's inside.
 
 ```
 $ ls -alh
