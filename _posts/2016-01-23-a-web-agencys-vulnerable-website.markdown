@@ -35,7 +35,7 @@ The application gave me an unexpected response.
 
 ![Login Response](/assets/images/posts/alpha-web-agency-01.png)
 
-The login form is vulnerable to SQL injection. I didn't try it when I went to Alpha Web Agency's site in November 2015. I tried to bypass the authorization sequence.
+The login form is vulnerable to SQL injection. I didn't try it when I went to Alpha Web Agency's site in November 2015. I tried to bypass the authentication sequence.
 
 ```
 Username: ' OR 1=1--
