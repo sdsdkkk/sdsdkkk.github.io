@@ -34,12 +34,12 @@ After they find that people who listen to "(Where's) The Silent Majority?" are a
 
 While both of the methods mentioned before are different in how they decide what to recommend, both of them will produce a table like this.
 
-```
+~~~
 Entity   | ItemA      ItemB      ItemC     ItemD     ItemE
 ----------------------------------------------------------
     E1   |  0.0        0.7        0.8       1.0       0.1
     E2   |  0.8        0.8        0.0       1.0       0.0
-```
+~~~
 
 In terms of user-based recommendation, the entity would be users, and the item ratings show how much is the likelihood that each user will like each item. For MuGeek, the items would be the songs in MuGeek's database.
 
@@ -49,7 +49,7 @@ In the case of MuGeek and their songs, the ratings would show how likely a user 
 
 The problem with this engine is that to recommend an item based on an entity, the system needs to process the entity's data and compare it to every other record in the system. We can save the data to database and query it later to fetch recommendations for users.
 
-```
+~~~
 Entity  | Target  | Score
 -------------------------
     E1  | ItemA   |  0.0
@@ -62,7 +62,7 @@ Entity  | Target  | Score
     E2  | ItemC   |  0.0
     E2  | ItemD   |  1.0
     E2  | ItemE   |  0.0
-```
+~~~
 
 When the system has so much data, saving the ratings into a database table to be queried later will take a lot of time.
 
@@ -80,7 +80,7 @@ By using unsupervised clustering algorithms, MuGeek can let their system cluster
 
 Take the table below as an illustration.
 
-```
+~~~
 EntityCluster  | TargetCluster  | Score
 ---------------------------------------
     ECluster1  | ItemClusterA   |  0.5
@@ -93,7 +93,7 @@ EntityCluster  | TargetCluster  | Score
     ECluster2  | ItemClusterC   |  0.4
     ECluster2  | ItemClusterD   |  1.0
     ECluster2  | ItemClusterE   |  0.3
-```
+~~~
 
 So now, how will we fetch the recommendation for individual users and songs? Good question, and that's why we'll have a Naive Bayes classifier.
 
@@ -105,20 +105,20 @@ We can also get recommendations for entities we didn't have on the training resu
 
 In short, the recommendation serving steps turned from this:
 
-```
+~~~
 request for entity X
   |> fetch recommendation record for entity X
        |> serve recommendation
-```
+~~~
 
 To this:
 
-```
+~~~
 request for entity X
   |> classify entity X to a cluster
        |> fetch recommendation for the cluster
             |> serve recommendation
-```
+~~~
 
 ### Problems
 

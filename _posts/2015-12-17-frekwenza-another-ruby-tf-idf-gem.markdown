@@ -20,7 +20,7 @@ In `split_docs` method, `downcase!` is used instead of `downcase`. This causes t
 
 See the code snippet below, taken from Ruby-Tf-Idf's [ruby-tf-idf.rb on line 95-105](https://github.com/mathieuripert/ruby-tf-idf/blob/master/lib/ruby-tf-idf.rb#L100).
 
-```rb
+~~~rb
 def split_docs(docs)
 
   splitted_docs = []
@@ -32,7 +32,7 @@ def split_docs(docs)
   end
   splitted_docs
 end
-```
+~~~
 
 The raised error will be rescued by the `rescue` block, but then the value of `splitted_docs` will not be appended. This causes the method to return a wrong result.
 
@@ -42,15 +42,15 @@ I was working with text documents written in Indonesian. It wasn't very convenie
 
 If I choose to use the stop words, Ruby-Tf-Idf will proceed to use both the English and French stop words too. So this is how I initialize the object when I don't want to use any stop words.
 
-```rb
+~~~rb
 t = RubyTfIdf::TfIdf.new corpus, limit, false
-```
+~~~
 
 And here's when I want to use stop words. I can't specify which set of stop words to use.
 
-```rb
+~~~rb
 t = RubyTfIdf::TfIdf.new corpus, limit, true
-```
+~~~
 
 I submitted a [pull request](https://github.com/mathieuripert/ruby-tf-idf/pull/1) for fixing the downcasing bug and adding a list of Indonesian stop words. But as the project goes, I have my third wish.
 
@@ -66,7 +66,7 @@ Not long after I finished the project, I started building [Frekwenza](https://gi
 
 Starting with the `split_docs` method, the following snippet is the method in Frekwenza.
 
-```rb
+~~~rb
 def split_docs(docs)
   words = []
   docs.each do |d|
@@ -74,27 +74,27 @@ def split_docs(docs)
   end
   words
 end
-```
+~~~
 
 Besides the switch from `downcase!` to `downcase` method, I also modified the regex used for `gsub`. On Frekwenza, any non-alphanumeric characters will be substituted with a space before the string is split.
 
 And more importantly, with Frekwenza, we can pass the path of a file containing our list of stop words for it to use.
 
-```rb
+~~~rb
 t = Frekwenza::TfIdf.new corpus, limit, "stop_words.txt"
-```
+~~~
 
 If we've loaded the file beforehand and we have the list of stop words in the form of an array of string, we can simply pass the array instead of the file location.
 
-```rb
+~~~rb
 t = Frekwenza::TfIdf.new corpus, limit, ["some", "stop", "words"]
-```
+~~~
 
 Of course we're free to not use any stop words too, as we can do with Ruby-Tf-Idf.
 
-```rb
+~~~rb
 t = Frekwenza::TfIdf.new corpus, limit
-```
+~~~
 
 Since the object initialization is a bit different, it won't work right away if you just switched from Ruby-Tf-Idf to Frekwenza. You need to make several adjustments in the parameters, and you need to keep Ruby-Tf-Idf's hard-coded stop words you've been using somewhere else and pass it to Frekwenza.
 

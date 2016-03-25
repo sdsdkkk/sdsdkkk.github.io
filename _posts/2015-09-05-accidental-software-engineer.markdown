@@ -14,8 +14,8 @@ Fortunately, most of them ended up alright. While being a master's student wasn'
 
 At least the accidents aren't so bad, some of them are quite good. And that sums up the introductory post for this blog. Here's a piece of "Hello World" code.
 
-```scala
+~~~scala
 object Main {
   def main(args: Array[String]) = println("Hello, World!")
 }
-```
+~~~
