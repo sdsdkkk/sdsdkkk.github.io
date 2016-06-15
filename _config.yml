@@ -4,11 +4,12 @@ meta_description: "Lines and Blocks"
 
 aboutPage: true
 
-markdown: KramdownPygments
+markdown: kramdown
 highlighter: pygments
 
 paginate: 20
 baseurl: /
+gems: [jekyll-paginate]
 domain_name: 'http://sdsdkkk.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
 disqus: true
