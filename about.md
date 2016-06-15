@@ -4,8 +4,8 @@ permalink: about/
 profile: true
 ---
 
-A programmer living in Indonesia. Interests including software engineering, machine learning, computer security, and system administration.
+A programmer living in Indonesia. Not really a jack of all trades, but neither is a master of any.
 
-Mainly programming Ruby, but started to use Scala for actual work lately. Not really a jack of all trades, but neither is a master of any.
+Mainly programming Ruby, also has some interests in security and some other stuffs.
 
 {% include footer.html %}
