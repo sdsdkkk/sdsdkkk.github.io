@@ -768,4 +768,4 @@ Thanks to SecTalks Brisbane and their sponsors for making these CTF challenges p
 "========================================="
 ```
 
-And it's done. It's pretty fun, I've been doing this challenge since afternoon up till midnight. Thanks [Xerubus](https://twitter.com/xerubus), this challenge feels like playing a role-playing game. I'm glad I can try a lot of tricks here from reverse engineering to network traffic analysis, even though I haven't gotten proficient in any of them yet and still needs lots of references to get the job done.
+And it's done. It's pretty fun, I've been doing this challenge since afternoon up till midnight. Thanks [Xerubus](https://twitter.com/xerubus), this challenge feels like playing a role-playing game. I'm glad I can try a lot of tricks here from reverse engineering to network traffic analysis, even though I haven't gotten really proficient in any of them yet and still need lots of references to get the job done.
