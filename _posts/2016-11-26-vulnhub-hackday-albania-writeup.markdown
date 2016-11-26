@@ -219,11 +219,7 @@ echo '</pre>';
 ?>
 ```
 
-The site gives this feedback.
-
-```
-Only images are allowed to get included. We hate hackers.
-```
+The site doesn't allow files other than images to be uploaded.
 
 So I renamed the PHP file to `shell.php` and tried to reupload it. It's uploaded and I can run shell commands using the PHP script.
 
