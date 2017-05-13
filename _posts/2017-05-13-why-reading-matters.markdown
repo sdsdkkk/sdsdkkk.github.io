@@ -42,7 +42,7 @@ I see that in the context of IT works and computer science, reading is a crucial
 
 It's perfectly fine to use other means of learning, but neglecting reading would end up harmful in the long term.
 
-On other fields such as music and sports, auditory and kinesthetic styles might trump visual learners who spends too much time reading. Every field have its own nature, and how its practitioners should improve themselves highly depends on it.
+On other fields such as music and sports, auditory and kinesthetic styles might trump visual learners who spends too much time reading. Every field has its own nature, and how its practitioners should improve themselves highly depends on it.
 
 ### References
 
