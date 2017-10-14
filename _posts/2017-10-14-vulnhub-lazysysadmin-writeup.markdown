@@ -156,6 +156,8 @@ smb: \> ls
 smb: \>
 ```
 
+`share$` doesn't allow us to put files into the server, but it allows us to get files. This means we're able to get any PHP file which code we need to see.
+
 We can see that it has WordPress running. After some check, the WordPress is run at `/wordpress/` path instead of `/wp/`, since `/wp/` is an empty directory.
 
 We can also see that the host is running on Apache.
