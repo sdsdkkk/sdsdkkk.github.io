@@ -7,7 +7,7 @@ aboutPage: true
 markdown: kramdown
 
 paginate: 20
-baseurl: /
+baseurl: 'http://sdsdkkk.github.io/'
 gems: [jekyll-paginate]
 domain_name: 'http://sdsdkkk.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
