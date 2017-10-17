@@ -7,15 +7,15 @@ aboutPage: true
 markdown: kramdown
 
 paginate: 20
-baseurl: 'http://sdsdkkk.github.io/'
+baseurl: 'https://sdsdkkk.github.io/'
 gems: [jekyll-paginate]
-domain_name: 'http://sdsdkkk.github.io'
+domain_name: 'https://sdsdkkk.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
 disqus: true
 disqus_shortname: 'sdsdkkk'
 
 # Details for the RSS feed generator
-url:            'http://sdsdkkk.github.io'
+url:            'https://sdsdkkk.github.io'
 author:         'Edwin Tunggawan'
 authorTwitter:  'sdsdkkk'
 
