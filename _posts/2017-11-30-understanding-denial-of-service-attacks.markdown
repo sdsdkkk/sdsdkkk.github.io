@@ -86,7 +86,7 @@ By the way, SQL injections can also end with the service being unavailable due t
 
 ### Conclusion
 
-There are a lot of variations for DoS/DDoS attacks, and not all of them are targeting the network bandwidth of the target system. The goal of DoS/DDoS attacks is to deny the service from being accessed by its intended users, and the method to achieve it could range from exhausting the resource of the system running the service to simply physically turning off the machine running the service.
+There are a lot of variations for DoS/DDoS attacks, and not all of them are targeting the network bandwidth of the target system. The goal of DoS/DDoS attacks is to deny the service from being accessed by its intended users, and the method to achieve it could range from exhausting the resource of the system running the service to simply physically turning off the machines.
 
 This post is intended to show several possibilities of performing DoS/DDoS attacks on a system, but the scenarios mentioned in this post is not all of them. Systems with different setups and architectures might not be vulnerable to some of the vulnerabilities mentioned in this post, but open to some other vulnerabilities we haven't think of.
 
