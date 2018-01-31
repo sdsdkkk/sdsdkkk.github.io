@@ -6,7 +6,7 @@ description: Some Thoughts Before Making a Technical Decision
 
 ### Background
 
-I happened to have met CTOs and VPs of engineering from a few companies, mostly startups, over the course of my engineering career. Some of them are seasoned engineers with years of engineering experience before they founded their companies or before they were recruited to their current companies. Some others were fresh out of college or didn't have a very solid engineering knowledge when appointed as the leader for the company's engineering/technology department.
+I happened to have met CTOs and VPs of engineering from a few companies, mostly startups, over the course of my engineering career. Some of them are seasoned engineers with years of engineering experience before they founded their companies or before they were recruited to their current companies. Some others were fresh out of college or didn't have very solid engineering knowledge when appointed as the leader for the company's engineering/technology department.
 
 One time, a junior engineer asked me a question, "Which CTO from those you have experience with do you think is the better one?"
 
