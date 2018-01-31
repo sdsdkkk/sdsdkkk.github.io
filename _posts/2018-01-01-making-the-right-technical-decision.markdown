@@ -34,7 +34,7 @@ In the last decade, lots of programming languages and frameworks were created an
 
 A soon-to-be CTO of a startup yet to be founded couldn't decide whether he should use Golang, JavaScript, PHP, or Python as his back-end development language. He already decided to use React.js for the front-end development standard, but he couldn't seem to decide which language and framework to use for the back-end.
 
-The answer would depend on his familiarity with the language and framework, his confidence to deliver the product using his chosen stack, and his confidence to attract engineers who're skillful and willing to work under him with what the stack.
+The answer would depend on his familiarity with the language and framework, his confidence to deliver the product using his chosen stack, and his confidence to attract engineers who're skillful and willing to work under him with the stack.
 
 > Which language suits your product best?  
 > Which framework helps you to build your MVP quickly?  
