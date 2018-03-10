@@ -90,7 +90,7 @@ I'm still not the best communicators around, but I think I managed to improve a 
 
 Remember when I said there will be lots of *Vagabond* reference earlier in this post? I didn't start to read *Vagabond* until some time in 2015, so I didn't think of Musashi when making my decision back then. But we all can learn from Musashi's journey, as I had when I read the manga. The manga is a work by Inoue Takehiko, who also did *Slam Dunk* which is quite popular in Indonesia at a time.
 
-Shinmen Takezo was a village boy from Sakushu. Together with his friend Hon'iden Matahachi, they were considered the stronger kids in the village. Matahachi wanted to go to war and make a name for themselves as warriors, so he and Musashi joined the battle of Sekigahara as soldiers. They were on the losing side, but they survived the battle together.
+Shinmen Takezo was a village boy from Sakushu. Together with his friend Hon'iden Matahachi, they were considered the stronger kids in the village. Matahachi wanted to go to war and make a name for themselves as warriors, so he and Takezo joined the battle of Sekigahara as soldiers. They were on the losing side, but they survived the battle together.
 
 They met a woman as they tried to survive after the battle. During their stay in the woman's house, the house was raided by a gang of bandits. Matahachi and the woman fled to live together peacefully, while Takezo fought the bandits and survived. Takezo would then come back to Sakushu and change his name to Miyamoto Musashi, then go on a quest to become the strongest swordsman bearing the title "invincible under the heavens".
 
