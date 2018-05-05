@@ -10,7 +10,7 @@ I was attending a local data science event in my area not too long ago, and met 
 
 After a bit of a chat, he told me that he's interested in computer and information security. But he found it as something hard to perceive, and the security class he took at university doesn't seem to give him much insight on it. I asked what was taught at the class, and he answered, "A lot of things. The CIA triad, mobile apps security, network protocols, and many more."
 
-The classes he took might cover many materials regarding the implementation gotchas part of security, but might miss ensuring the students have a basic understanding of what security is. It's not so strange to miss that, because throghout my bachelor's study the security classes didn't cover the basic question of what security is while throghout my master's study it's explained in a very abstract way in the security classes.
+The classes he took might cover many materials regarding the implementation gotchas part of security, but might miss ensuring the students have a basic understanding of what security is. It's not so strange to miss that, because throughout my bachelor's study the security classes didn't cover the basic question of what security is while throughout my master's study it's explained in a very abstract way in the security classes.
 
 ### Computer and Information Security
 
