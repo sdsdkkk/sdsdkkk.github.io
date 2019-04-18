@@ -22,7 +22,7 @@ PORT      STATE SERVICE
 MAC Address: 08:00:27:36:D1:DD (Oracle VirtualBox virtual NIC)
 ```
 
-Port 31337 is serving website a static website.
+Port 31337 is serving a static website.
 
 ![UnknownDevice64 Landing Page](/assets/images/posts/ud64-homepage.png)
 
@@ -40,7 +40,7 @@ PORT     STATE SERVICE
 MAC Address: 08:00:27:36:D1:DD (Oracle VirtualBox virtual NIC)
 ```
 
-Using telnet, we can see that it's an SSH server listening on port 1337.
+Using `telnet`, we can see that it's an SSH server listening on port 1337.
 
 ```
 $ telnet 192.168.0.115 1337
