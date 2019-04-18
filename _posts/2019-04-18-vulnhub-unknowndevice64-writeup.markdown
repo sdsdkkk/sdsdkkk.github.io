@@ -168,7 +168,7 @@ I tried connecting to the SSH server using that as the username and password, bu
 $ steghide extract -sf key_is_h1dd3n.jpg
 ```
 
-`steghide` asked the passphrase, fir which I entered the word `h1dden` as the image's filename seems to be hinting that the password is `h1dd3n`.
+`steghide` asked the passphrase, for which I entered the word `h1dden` as the image's filename seems to be hinting that the password is `h1dd3n`.
 
 `steghide` gave me a file output named `h1dd3n.txt`, whose content seems like a Brainfuck code to me.
 
