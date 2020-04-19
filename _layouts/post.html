@@ -1,50 +1,42 @@
 ---
-layout: default
-archive: true
+layout: page
 ---
-
-<article class="post">
-    <header>
-        <h1>{{ page.title }}</h1>
-        <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }}</h2>
-    </header>
-    <section id="post-body">
-        {{content}}
-    </section>
-</article>
-<footer id="post-meta" class="clearfix">
-    <a href="http://twitter.com/{{ site.authorTwitter }}">
-        <img class="avatar" src="{{ site.baseurl }}assets/images/sdsdkkk.png">
-        <div>
-            <span class="dark">{{ site.author }}</span>
-            <span>{{ site.description }}</span>
-        </div>
-    </a>
-
-    <section id="sharing">
-        {% include share.html %}
-    </section>
-</footer>
-
-<!-- Disqus comments -->
-{% if site.disqus %}
-    <div class="archive readmore">
-        <h3>Comments</h3>
-        {% include disqus.html %}
+<article class="c-article">
+  <header class="c-article__header">
+    <h1 class="c-article__title">{{ page.title }}</h1>
+    <p class="c-article__time"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+  </header>
+  <!-- Post Tags -->
+  <ul class="c-tags">
+    {% for tag in page.tags %}
+    <li class="c-tag">{{ tag }}</li>
+    {% endfor %}
+  </ul>
+  <div class="c-article__main">
+    {{ content }}
+  </div>
+  <!-- Previous / Next Buttons -->
+  <div class="pagenav">
+    {% if page.previous.url %}
+    <div class="wrapper" id="left">
+      <small><b>Previous</b> {{page.previous.date | date: "%b %-d, %Y"}}</small>
+      <br>
+      <a class="no-hov" href="{{ page.previous.url | prepend: site.baseurl }}">&laquo; {{page.previous.title}}</a>
     </div>
-{% endif %}
-
-<!-- Archive post list -->
-{% if page.archive %}
-    <ul id="post-list" class="archive readmore">
-        <h3>Read more</h3>
-        {% for post in site.posts %}
-            <li>
-                <a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}">{{ post.title }}<aside class="dates">{{ post.date | date:"%b %d" }}</aside></a>
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
-
-
-
+    {% endif %}
+    {% if page.next.url %}
+    <div class="wrapper" id="right">
+      <small>{{page.next.date | date: "%b %-d, %Y"}} <b>Next</b></small>
+      <br>
+      <a class="no-hov" href="{{ page.next.url | prepend: site.baseurl }}">{{page.next.title}} &raquo;</a>
+    </div>
+    {% endif %}
+  </div>
+  <!-- Disqus comments view -->
+  {% if page.comments != false and site.disqus_id %}
+  <div class="post-disqus">
+    <section id="disqus_thread"></section>
+    {% include disqus.html %}
+  </div>
+  {% endif %}
+</article>

@@ -1,42 +1,26 @@
-name: Lines and Blocks
-description: Programmer
-meta_description: "Lines and Blocks"
+# Site settings
+title: "Exploration Log"
+description: > 
+  Notes on explorations on various topics of interest.
 
-aboutPage: true
+author: Edwin Tunggawan
+email: vcc.edwint@gmail.com
+twitter_username: sdsdkkk
+github_username: sdsdkkk
 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://sdsdkkk.github.io" # the base hostname & protocol for your site
+
+google_analytics_id:
+disqus_id:
+
+# Build settings
+include: [_pages]
 markdown: kramdown
+permalink: /:year/:month/:title.html
 
-paginate: 20
-baseurl: 'https://sdsdkkk.github.io/'
-gems: [jekyll-paginate]
-domain_name: 'https://sdsdkkk.github.io'
-google_analytics: 'UA-XXXXXXXX-X'
-disqus: true
-disqus_shortname: 'sdsdkkk'
+sass:
+    style: compressed
 
-# Details for the RSS feed generator
-url:            'https://sdsdkkk.github.io'
-author:         'Edwin Tunggawan'
-authorTwitter:  'sdsdkkk'
+exclude: [vendor]
 
-permalink:       /:year/:title/
-
-defaults:
-    -
-        scope:
-            path: "" # empty string for all files
-            type: pages
-        values:
-            layout: default
-    -
-        scope:
-            path: "" # empty string for all files
-            type: posts
-        values:
-            layout: post
-    -
-        scope:
-            path: ""
-            type: drafts
-        values:
-            layout: post

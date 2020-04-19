@@ -1,0 +1,20 @@
+<header class="c-page__header">
+  <h1><code>{{ site.title}}</code></h1>
+  {% if page.title == 'Home' %}
+  <h1>{{ site.description }}</h1>
+  {% endif %}
+  <p>
+    <a href="{{ "/" | prepend: site.baseurl }}">Home</a><span
+          class="u-separate"></span> <a href="{{ "/archives/" | prepend:
+          site.baseurl }}">Archives</a><span class="u-separate"></span> <a href="{{ "/about/" | prepend: site.baseurl }}">About</a><span class="u-separate"></span><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+  </p>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</header>
