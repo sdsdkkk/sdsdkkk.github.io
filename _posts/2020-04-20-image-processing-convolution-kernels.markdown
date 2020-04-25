@@ -2,7 +2,7 @@
 layout: content
 title: "Image Processing Convolution Kernels"
 date: 2020-04-20 00:00:00
-description: Looking at Convolution Kernels Commonly Used for Image Processing
+description: Looking at convolution kernels commonly used for image processing
 ---
 
 As someone who's relatively inexperienced with image processing, I started by looking at random image kernels on the web before applying it on the Matlab environment while I'm testing some random image kernels to see how all those image kernels perform against the test images. After that, I tweak the kernel's values to see what will happen to the result with the new values.
