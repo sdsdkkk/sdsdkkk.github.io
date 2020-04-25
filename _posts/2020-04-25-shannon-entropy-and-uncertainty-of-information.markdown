@@ -77,7 +77,7 @@ So to send a message containing up to 10 characters containing only the characte
 Assuming all characters has the same probability of $$\frac{1}{26}$$ to appear in the message, we can estimate the number of minimum bits to use in the message per character as follows.
 
 $$
-H(X) = - \sum_{i=1}^26 P(x_{i}) log_{2} P(x_{i}) = - 26 \times (\frac{1}{26} log_{2} \frac{1}{26})
+H(X) = - \sum_{i=1}^{26} P(x_{i}) log_{2} P(x_{i}) = - 26 \times (\frac{1}{26} log_{2} \frac{1}{26})
 $$
 
 So the number of minimum bits to use in the message per character is as below.
