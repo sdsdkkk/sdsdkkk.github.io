@@ -5,9 +5,9 @@ date: 2020-04-25 00:00:00
 description: An attempt to better understand Shannon entropy as a measurement of uncertainty
 ---
 
-The following is the formula for [Shannon entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)), the measurements of entropy in information theory and also known as information entropy. Shannon defined the entropy $$H$$ after [Boltzmann's H-theorem](https://en.wikipedia.org/wiki/H-theorem).
-
 Shannon entropy is commonly used in malware analysis, and I actually started writing this article after an attempt to better understand Shannon entropy after reading [this paper](https://arxiv.org/pdf/1909.07227.pdf) by Duc-Ly Vu and team.
+
+The following is the formula for [Shannon entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)), the measurements of entropy in information theory and also known as information entropy. Shannon defined the entropy $$H$$ after [Boltzmann's H-theorem](https://en.wikipedia.org/wiki/H-theorem).
 
 $$
 H(X) = - \sum_{i=1}^n P(x_{i}) log_{b} P(x_{i})
@@ -152,11 +152,11 @@ Therefore, Shannon entropy works by measuring the number of bits to represent a 
 
 # References
 
+[A Convolutional Transformation Network for Malware Classification](https://arxiv.org/pdf/1909.07227.pdf)
+
 [Entropy (information theory)](https://en.wikipedia.org/wiki/Entropy_(information_theory))
 
-[Boltzmann's H-theorem](https://en.wikipedia.org/wiki/H-theorem)
-
-[A Convolutional Transformation Network for Malware Classification](https://arxiv.org/pdf/1909.07227.pdf)
+[H-theorem](https://en.wikipedia.org/wiki/H-theorem)
 
 [A Mathematical Theory of Communication](http://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf)
 
