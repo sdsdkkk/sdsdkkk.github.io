@@ -2,7 +2,7 @@
 layout: content
 title: "Konigsberg Bridge Problem"
 date: 2020-05-01 00:00:00
-description: Revisiting Konigsberg bridge problem and the Euler's path theorem
+description: Revisiting Konigsberg bridge problem and the Euler's circuit
 ---
 
 This article is originally a test page for a few JavaScript libraries and plugins I can use to write code to be processed as rendered graph on the client side. Since I was testing it using the Konigsberg bridge problem as the test graph, I decided to simply write a note about it to not waste the effort I've spent on drawing the graph representation of the problem. Also, it's a good chance to revisit the graph theory for a bit.
