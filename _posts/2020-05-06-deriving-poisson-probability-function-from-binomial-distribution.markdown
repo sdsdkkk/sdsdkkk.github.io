@@ -114,22 +114,22 @@ $$
 The operation $$\frac{n!}{(n - k)!} \frac{1}{n^k}$$ can be transformed.
 
 $$
-\frac{n!}{(n - k)!} \frac{1}{n^k} = \frac{n(n - 1)(n - 2) ... (n - x + 1)(n - x)!}{(n - x)! n^x} \\
-\frac{n!}{(n - k)!} \frac{1}{n^k} = \frac{n(n - 1)(n - 2) ... (n - x + 1)}{n^x} \\
-\frac{n!}{(n - k)!} \frac{1}{n^k} = \frac{n}{n} \frac{n - 1}{n} \frac{n - 2}{n} ... \frac{n - x + 1}{n} \\
-\frac{n!}{(n - k)!} \frac{1}{n^k} = 1 (1 - \frac{1}{n}) (1 - \frac{2}{n}) ... (1 - \frac{x + 1}{n})
+\frac{n!}{(n - k)!} \frac{1}{n^k} = \frac{n(n - 1)(n - 2) ... (n - k + 1)(n - k)!}{(n - k)! n^k} \\
+\frac{n!}{(n - k)!} \frac{1}{n^k} = \frac{n(n - 1)(n - 2) ... (n - k + 1)}{n^k} \\
+\frac{n!}{(n - k)!} \frac{1}{n^k} = \frac{n}{n} \frac{n - 1}{n} \frac{n - 2}{n} ... \frac{n - k + 1}{n} \\
+\frac{n!}{(n - k)!} \frac{1}{n^k} = 1 (1 - \frac{1}{n}) (1 - \frac{2}{n}) ... (1 - \frac{k + 1}{n})
 $$
 
 Now we can plug it in for substitution in the $$P(X = k)$$ function.
 
 $$
-P(X = k) = \frac{\lambda^k}{k!} (1 - \frac{1}{n}) (1 - \frac{2}{n}) ... (1 - \frac{x + 1}{n}) (1 - \frac{\lambda}{n})^{n - k}
+P(X = k) = \frac{\lambda^k}{k!} (1 - \frac{1}{n}) (1 - \frac{2}{n}) ... (1 - \frac{k + 1}{n}) (1 - \frac{\lambda}{n})^{n - k}
 $$
 
 Since $$(1 - \frac{\lambda}{n})^{n - k} =  (1 - \frac{\lambda}{n})^{n} (1 - \frac{\lambda}{n})^{-k}$$, we can substitute it too.
 
 $$
-P(X = k) = \frac{\lambda^k}{k!} (1 - \frac{1}{n}) (1 - \frac{2}{n}) ... (1 - \frac{x + 1}{n}) (1 - \frac{\lambda}{n})^{n} (1 - \frac{\lambda}{n})^{-k}
+P(X = k) = \frac{\lambda^k}{k!} (1 - \frac{1}{n}) (1 - \frac{2}{n}) ... (1 - \frac{k + 1}{n}) (1 - \frac{\lambda}{n})^{n} (1 - \frac{\lambda}{n})^{-k}
 $$
 
 Now we can apply the limit with $$n \to \infty$$. Most of the fractions with $$n$$ as the denominator will be approaching zero since it's divided by $$n$$ which is approaching infinity. But there's a special case with $$(1 - \frac{\lambda}{n})^{n}$$, as described in the previous section about $$e^x$$ it will become as follows.
