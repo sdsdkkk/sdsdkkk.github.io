@@ -1,7 +1,7 @@
 ---
 layout: content
 title: "Cross-Entropy and Kullback-Leibler Divergence"
-date: 2020-05-13 00:00:00
+date: 2020-05-14 00:00:00
 description: Measuring the distance between prediction and reality in terms of encoding efficiency
 ---
 
