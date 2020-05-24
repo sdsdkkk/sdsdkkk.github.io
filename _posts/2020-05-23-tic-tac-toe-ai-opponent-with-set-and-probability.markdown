@@ -25,7 +25,7 @@ All of the grids on the board are labeled with numbers 1-9 for easier referencin
 
 Two players are taking turns to occupy the grids, and the player who successfully occupies three grids that form a horizontal, vertical, or diagonal line through the board wins the game.
 
-I decided to work on formulating a simple AI to play the game with what I know at this point of time as an exercise, while also looking into other approaches to see how it can be improved. One of the approaches I found is [using minimax algorithm](https://towardsdatascience.com/tic-tac-toe-creating-unbeatable-ai-with-minimax-algorithm-8af9e52c1e7d), which I haven't really understood at this point.
+I decided to work on formulating a simple AI to play the game with what I know at this point of time as an exercise, while also looking into other approaches to see how it can be improved. One of the approaches I found is [using minimax algorithm](https://towardsdatascience.com/tic-tac-toe-creating-unbeatable-ai-with-minimax-algorithm-8af9e52c1e7d), which I haven't really understood at this point. Also, I'm avoiding using [game tree](https://en.wikipedia.org/wiki/Game_tree) in the current implementation since I want to see how well it can go with just sets and naive probability-based weights.
 
 In general, I'm going with the simple approach on building the AI logic for this tic-tac-toe game based on the concepts of set and probability. I'm using sets to model the win condition of the game which is the end goal the AI will aim to achieve, and I'm using probability to set the weights of each grids for the AI to decide its next move based on how many possible winning scenario the said grid is able to support.
 
@@ -73,9 +73,13 @@ After each move, the players will weigh their next move based on the current con
 
 I implemented the AI logic for the opponent's moves using the win scenarios $$w \in W$$ as a reference when weighing the strategic advantage of occupying a certain grid. Weights are set based on the table above counting the number of possible win scenarios to pursue for each grid. There are total 8 win scenarios as included in the set $$W$$.
 
-The weakness of this implementation is that the AI doesn't recalculate the weight for all the grids in the board after each turn because I didn't implement the recalculation for all remaining grids based on the still-available winning conditions, but just for the grids that has been occupied and the grids that needs to be occupied when one move away from winning or losing. So the AI will keep having lower weights for grids 2, 4, 6, and 8 compared to the other grids even when the game has progressed to the point where choosing to occupy those grids are actually more advantageous than occupying the remaining corner grids (1, 3, 7, or 8).
+The initial weakness of this implementation is that the AI doesn't recalculate the weight for all the grids in the board after each turn because I didn't implement the recalculation for all remaining grids based on the still-available winning conditions, but just for the grids that has been occupied and the grids that needs to be occupied when one move away from winning or losing. So the AI will keep having lower weights for grids 2, 4, 6, and 8 compared to the other grids even when the game has progressed to the point where choosing to occupy those grids are actually more advantageous than occupying the remaining corner grids (1, 3, 7, or 8).
 
-This weakness doesn't impact the game that much though, since as soon as the lower-weight grids are necessary for the AI or its opponent's last move in order to win it will raise the grid's weight to maximum value in order to occupy that grid as soon as possible. This is done in order to secure a win or avoid losing when it has a good chance of happening in the next move.
+I ended up updating the weight for the whole grid using the calculation of how many remaining available winning condition open to the AI can be supported by each remaining available grids.
+
+As soon as a grid is open for the AI or its opponent's last move in order to win it will raise the grid's weight to maximum value in order to occupy that grid as soon as possible. This is done in order to secure a win or avoid losing when it has a good chance of happening in the next move. It will prioritize winning over avoiding a loss in the cases where it has to prioritize one over another on the next move.
+
+It can be guaranteed to be beaten by the player if the player has the first move and start taking corner moves though, since the logic will prioritize occupying a grid which support the most possible winning scenarios so it will prioritize taking the center grid (5) whenever it's available. The AI doesn't really plan that much into the future, as it only plans for the next one move based on the win conditions it can still achieve according to its knowledge base.
 
 The following is [the gist](https://gist.github.com/sdsdkkk/37734cf9f510c99a407ae03fe87af2ea) for the implementation, hosted on GitHub. The code is tested with Python 3.8.1.
 
@@ -86,5 +90,7 @@ The following is [the gist](https://gist.github.com/sdsdkkk/37734cf9f510c99a407a
 [Tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 [Tic Tac Toe - Creating Unbeatable AI](https://towardsdatascience.com/tic-tac-toe-creating-unbeatable-ai-with-minimax-algorithm-8af9e52c1e7d)
+
+[Game tree](https://en.wikipedia.org/wiki/Game_tree)
 
 [Simple tic-tac-toe AI implementation using statistics-based weights on grids for 3x3 board](https://gist.github.com/sdsdkkk/37734cf9f510c99a407ae03fe87af2ea)
