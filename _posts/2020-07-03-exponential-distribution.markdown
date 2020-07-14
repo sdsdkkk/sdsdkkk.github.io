@@ -2,7 +2,7 @@
 layout: content
 title: "Exponential Distribution"
 date: 2020-07-03 00:00:00
-description: Understanding how the cumulative density function is constructed
+description: Understanding how the cumulative distribution function is constructed
 ---
 
 According to [this note](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119197096.app03) from the book [Advanced Analytical Models](https://www.amazon.com/Advanced-Analytical-Models-Applications-Accord/dp/047017921X) by Johnathan Mun, the exponential distribution is used to describe events recurring at random points in time while the Weibull distribution is used to describe time to failure in reliability studies. In this case, both distributions are commonly used for predicting the reliability of a system by measuring the time to failure.
@@ -39,9 +39,9 @@ $$
 
 That means if an event is happening in the rate of $$\lambda$$ times per hour, we can expect one event to happen every $$\mu = \frac{1}{\lambda}$$ hour.
 
-# Cumulative Density Function
+# Cumulative Distribution Function
 
-The cumulative density function of the exponential distribution is defined as follows for $$x \geq 0$$.
+The cumulative distribution function of the exponential distribution is defined as follows for $$x \geq 0$$.
 
 $$
 P(X < x) = F(x) = 1 - e^{-\lambda x}
@@ -49,7 +49,7 @@ $$
 
 If $$x < 0$$, then $$F(x) = 0$$.
 
-This is how the cumulative density function is derived.
+This is how the cumulative distribution function is derived.
 
 $$
 F(x) = \int_{a}^{b} f(x)\ dx \\
