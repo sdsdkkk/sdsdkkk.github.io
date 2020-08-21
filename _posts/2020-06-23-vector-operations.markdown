@@ -242,7 +242,7 @@ $$
 The [dot product](https://en.wikipedia.org/wiki/Dot_product) can be defined using an algebraic definition as follows where $$n$$ is the number of dimension of the vectors $$\vec{a}$$ and $$\vec{b}$$.
 
 $$
-\vec{a} \cdot \vec{b} = \Sigma_{i = 1}^n a_i b_i
+\vec{a} \cdot \vec{b} = \sum_{i = 1}^n a_i b_i
 $$
 
 For pairs of 2D and 3D vectors, the calculation is as follows.

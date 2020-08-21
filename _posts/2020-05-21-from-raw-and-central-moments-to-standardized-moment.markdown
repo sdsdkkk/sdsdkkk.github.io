@@ -12,20 +12,20 @@ In mathematics, [moment](https://en.wikipedia.org/wiki/Moment_(mathematics)) is 
 I'm using [this video](https://www.youtube.com/watch?v=fv5QB3eK7jA) lecture by Sanjoy Mahajan as a reference for the following formula, but I'm using a different notation. The formula for the $$k$$-th moment of a distribution $$X$$ where $$x \in X$$ is as follows.
 
 $$
-E[X^k] = \Sigma_{i = 1}^n p_{i} x_{i}^k
+E[X^k] = \sum_{i = 1}^n p_{i} x_{i}^k
 $$
 
 Another reference I'm using is [this document](http://geog.uoregon.edu/GeogR/topics/moments.pdf) from the geography department of the University of Oregon. The formula from the University of Oregon is centralizing the position of the center of mass to 0. The following is the formula they use for the moments with the mean of the observed sample $$\bar{X}$$.
 
 $$
-E[(X - \bar{X})^k] = \Sigma_{i = 1}^n (x_i - \bar{X})^k
+E[(X - \bar{X})^k] = \sum_{i = 1}^n (x_i - \bar{X})^k
 $$
 
 On this formula, the distribution is standardized to have its center of mass or its mean located at 0. They need to divide the result by $$ns^k$$ for third ($$k = 3$$) and fourth ($$k = 4$$) moments to get the skewness and kurtosis values. If we're looking at the the formula with Sanjoy Mahajan's lecture as a reference, $$n$$ should be the number of elements in $$X$$ assuming each element's probability is $$p = \frac{1}{n}$$ for $$x \in X$$. $$s$$ is the observed standard deviation of the finite sample.
 
 $$
-Skew[X] = \frac{E[(X - \bar{X})^3]}{ns^3} = \frac{\Sigma_{i = 1}^n (x_i - \bar{X})^k}{ns^3} \\
-Kurt[X] = \frac{E[(X - \bar{X})^4]}{ns^4} = \frac{\Sigma_{i = 1}^n (x_i - \bar{X})^k}{ns^4}
+Skew[X] = \frac{E[(X - \bar{X})^3]}{ns^3} = \frac{\sum_{i = 1}^n (x_i - \bar{X})^k}{ns^3} \\
+Kurt[X] = \frac{E[(X - \bar{X})^4]}{ns^4} = \frac{\sum_{i = 1}^n (x_i - \bar{X})^k}{ns^4}
 $$
 
 Wikipedia has another page on [standardized moment](https://en.wikipedia.org/wiki/Standardized_moment) which is supposedly based on the standardized setup where the first moment is $$\mu_{1} = 0$$ as the center of mass and is used as the base to calculate the rest of the moments. The formula stated there (as seen below) is using integration instead of summation, and aimed for continuous instead of discrete distributions.
@@ -52,7 +52,7 @@ Both $$\mu_k$$ and $$\sigma^k$$ is used in the moment calculation as such.
 These equations are consistent with the formula used to calculate skewness and kurtosis we got from the University of Oregon before, so if we compare the formulas we should get the following formila for calculating the $$\mu_k$$ of a discrete distribution (which is consistent with Sanjoy Mahajan's formula).
 
 $$
-\mu_k = E[(X - \mu)^k] = \Sigma_{i = 1}^n (x - \mu)^k p_i
+\mu_k = E[(X - \mu)^k] = \sum_{i = 1}^n (x - \mu)^k p_i
 $$
 
 Where $$p_i$$ is the probability of value $$x_i$$ appearing in the population.

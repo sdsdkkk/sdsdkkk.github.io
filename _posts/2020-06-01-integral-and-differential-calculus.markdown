@@ -164,7 +164,7 @@ We can draw two rectangles now.
 We should be able to get a better approximation by using more rectangles with less width in terms of $$\Delta x$$. To get the most number of rectangles, we need to make the rectangle as thin as possible with $$\Delta x \to 0$$ converge to the curve's area and calculate the sum of all $$n$$ rectangles' area to get the approximation.
 
 $$
-A_{total} = \Sigma_{i = 0}^{n} f(t_i) (x_{i + 1} - x_i)
+A_{total} = \sum_{i = 0}^{n} f(t_i) (x_{i + 1} - x_i)
 $$
 
 Where $$f(t_i)$$ is the height of the rectangle and $$\Delta x = x_{i + 1} - x_i$$ is the width. This is the basic idea of [Riemann integral](https://en.wikipedia.org/wiki/Riemann_integral).
