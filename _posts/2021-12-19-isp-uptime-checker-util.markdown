@@ -2,7 +2,7 @@
 layout: post
 title: "ISP Uptime Checker Util"
 date: 2021-12-19 00:00:00
-description: Looking at the scan durations of various Nmap scan techniques
+description: Implementing an ISP uptime checking system util
 tags: ComputerScience SoftwareEngineering Networks
 ---
 
