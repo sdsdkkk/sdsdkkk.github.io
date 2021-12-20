@@ -36,7 +36,7 @@ The system is implemented as a long running process daemon which is managed by [
 
 We're using Python 3 to implement the job, as it's readily available in the [Raspbian OS](https://www.raspbian.org/) installation used for the Raspberry Pi device.
 
-I decided to use [ping3](https://pypi.org/project/ping3/) package for performing network connection checks using ICMP protocol instead of running `ping` system command in the implementation. Initially, I planned to do my own connectivity checker implementation using [Scapy](https://scapy.net/) and simply try to initiate a three-way handshake up to the SYN/ACK response in order to check if the host is reachable with minimum network packet overhead. But in the end I decided not to, because sending abnormal TCP package continuously to the hosts might be detected as a suspicious activity by their security system.
+I decided to use [ping3](https://pypi.org/project/ping3/) package for performing network connection checks using ICMP protocol instead of running `ping` system command in the implementation. Initially, I planned to do my own connectivity checker implementation using [Scapy](https://scapy.net/) and simply try to initiate a three-way handshake up to the SYN/ACK response in order to check if the host is reachable with minimum network packet overhead. But in the end I decided not to, because sending abnormal TCP packets continuously to the hosts might be detected as a suspicious activity by their security system.
 
 # Implementation
 
