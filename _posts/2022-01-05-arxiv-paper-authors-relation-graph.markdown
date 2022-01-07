@@ -71,10 +71,10 @@ $$S(a, c, d)$$ is the similarity value of $$a$$ and $$c$$ where the value of $$S
 The result from $$S(a, c, d)$$ for every $$c \in C$$ will be averaged as follows to be used as a feature of author $$a$$ in determining whether the author $$a$$ is a representation of a single author or multiple authors.
 
 $$
-S_{average} = \frac{1}{n} \Sigma_{i = 0}^{n} S(a, c_i, d)
+S_{average} = \frac{1}{n} \Sigma_{i = 1}^{n} S(a, c_i, d)
 $$
 
-Where $$n = \vert C \vert$$ and $$c_i \in C$$.
+Where $$n = \vert C \vert$$ and $$c_i \in C$$. In the case where $$C = \{ \varnothing \}$$, we assume $$S_{average} = 1$$.
 
 For this experiment, we'll be using $$d = 1$$. I initially intended to also explore $$d = 2$$ and use the $$S_{average}$$ value as a feature in the classifier model, but due to the exponential growth of the number of vertices that needs to be processed and there's a good chance that the $$S_{average}$$ we're getting from $$d = 1$$ and $$d = 2$$ will be highly correlated, I settled with just $$d = 1$$.
 
