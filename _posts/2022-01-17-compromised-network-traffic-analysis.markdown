@@ -59,31 +59,31 @@ The date of detected compromise as follows, as mentioned earlier in this post.
 
 We'd like to see if there's any changes in the machines' daily connection pattern on their respective compromise dates.
 
-### Machine 1 - Compromise Date: 2006-08-24
+### Machine 1 - Detected Compromise Date: 2006-08-24
 
 The machine shows a spike in the number of connections made around the time of compromise, but the peak is actually on 2006-08-22 instead of on 2006-08-24 when the compromise is detected. On 2006-08-24, the number of connections made is lower.
 
 ![Machine 1's connection count](/images/posts/stanford-network-l_ipn-1-connection.png)
 
-### Machine 5 - Compromise Date: 2006-09-04
+### Machine 5 - Detected Compromise Date: 2006-09-04
 
 The machine doesn't show any significant difference in the number of connections made around the time of compromise.
 
 ![Machine 5's connection count](/images/posts/stanford-network-l_ipn-5-connection.png)
 
-### Machine 4 - Compromise Date: 2006-09-18
+### Machine 4 - Detected Compromise Date: 2006-09-18
 
 We can see a huge spike in the number of connection made on 2006-09-18, which is the date the machine was identified as a compromised machine. Given the number of connections made on the day, the machine might be participating in a DDoS attack. But the number of connections started to spike on 2006-09-17, with the total of 275,140 connections a day before it peaked in 2006-09-17 with the total of 785,297 connections made in a day.
 
 ![Machine 4's connection count](/images/posts/stanford-network-l_ipn-4-connection.png)
 
-### Machine 3 - Compromise Date: 2006-09-26
+### Machine 3 - Detected Compromise Date: 2006-09-26
 
 We can see a spike around the time of compromise in the chart. The spike happens starting from 2006-09-26 and continues to 2006-09-27, but this spike isn't that significant if we consider the overall traffic pattern of the machine.
 
 ![Machine 3's connection count](/images/posts/stanford-network-l_ipn-3-connection.png)
 
-### Machine 6 - Compromise Date: 2006-09-26
+### Machine 6 - Detected Compromise Date: 2006-09-26
 
 We can see a spike around the time of compromise in the chart, similar to machine 3 which is supposedly compromised on the same day. But the spike on this machine happens on 2006-09-25, the day before the detected compromise, and there's no spike during the day of compromise.
 
