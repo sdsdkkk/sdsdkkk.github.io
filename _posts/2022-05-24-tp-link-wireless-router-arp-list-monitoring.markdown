@@ -6,7 +6,7 @@ description: Keeping track of a TL-WR840N device's ARP list changes
 tags: Security Networks
 ---
 
-I got myself a [Raspberry Pi 3 model B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/) to tinker with in December 2022, and aside from doing some hobby machine learning projects I've also used it for [monitoring the downtime of my ISP](/2021-12-19/isp-uptime-checker-util). The [systemd](http://systemd.io/) config I made for this project is exactly the same as what I did for that project, so I'm skipping it here.
+I got myself a [Raspberry Pi 3 model B+](https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/) to tinker with in December 2021, and aside from doing some hobby machine learning projects I've also used it for [monitoring the downtime of my ISP](/2021-12-19/isp-uptime-checker-util). The [systemd](http://systemd.io/) config I made for this project is exactly the same as what I did for that project, so I'm skipping it here.
 
 My network lacked the monitoring system to log when a device is connected to the network and when it is disconnected. So I checked around the router admin panel of my home router, which is a [TP-Link TL-WR840N](https://www.amazon.com/TP-Link-TL-WR840N-300Mbps-Wireless-Router/dp/B00ENM3RUQ/) device. So I poked around the web administrative dashboard to check the requests it's performing to retrieve the ARP list.
 
