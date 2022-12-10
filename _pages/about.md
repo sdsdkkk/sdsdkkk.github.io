@@ -15,6 +15,7 @@ The posts I write for this blog are usually related to software engineering, com
 You can also find me or reach out to me on the following platforms/channels:
 
 - [Twitter](https://twitter.com/sdsdkkk): basically shitposting, I talk about manga, mobile games, and random topics here but sometimes I do talk about tech
+- [Mastodon](https://mastodon.social/@sdsdkkk): posting in a somewhat similar format with on Twitter, but less frequently and more leaning towards serious tech stuff instead of shitposts as on Twitter
 - [Medium](https://medium.com/@sdsdkkk): I write articles for [Cermati's Medium publication](https://medium.com/cermati-tech), mainly on working in tech and managing an engineering team
 - [Instagram](https://instagram.com/not.sdsdkkk): photos of various objects or sceneries I find interesting
 - [GitHub](https://github.com/sdsdkkk): code repositories and snippets
