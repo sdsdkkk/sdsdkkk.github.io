@@ -3,7 +3,7 @@ layout: post
 title: "System Design, Culture, and Philosophy"
 date: 2022-12-11 00:00:00
 description: Designing a system to support an organization for a long term
-tags: SoftwareEngineering Security Network Random
+tags: SoftwareEngineering Random
 ---
 
 Since 2017, I've been working at Cermati mainly in the domain of infrastructure platform engineering. I've written quite a bit about what I and my team at Cermati have been working on, mainly on [Medium](https://medium.com/@sdsdkkk) for [Cermati's Medium publication](https://medium.com/cermati-tech). Since 2020, I also have been building Cermati's cybersecurity team.
