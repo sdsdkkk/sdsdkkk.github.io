@@ -42,7 +42,7 @@ One shortcoming of the data collection method I used is that it doesn't record m
 
 ![Monthly max number of geckos per sighting](/images/posts/gecko-monthly-max-number-per-sighting.png)
 
-I can probably use the data on the gecko's color and patterns, but due to varying lighting conditions when I observed them I might've mistaken the same gecko by their dark or light colorings when checking them visually. Also, after a few months of recording the sightings I learned that [_Hemidactylus frenatus_ can change colors](https://ejournal.undip.ac.id/index.php/bioma/article/view/36617) from darker to lighter gradients and vice versa to for camouflage and thermal regulation, so the color that I recorded might not be relevant for identifying them.
+I can probably use the data on the gecko's color and patterns, but due to varying lighting conditions when I observed them I might've mistaken the same gecko by their dark or light colorings when checking them visually. Also, after a few months of recording the sightings I learned that [_Hemidactylus frenatus_ can change colors](https://ejournal.undip.ac.id/index.php/bioma/article/view/36617) from darker to lighter gradients and vice versa for camouflage and thermal regulation, so the color that I recorded might not be relevant for identifying them.
 
 I recorded the aggressiveness of the geckos in the behavior column, where I categorized them into aggressive, neutral, and timid. Aggressive is when the gecko reacts to my presence by approaching me as if it's prepared to defend itself when I approach it. Neutral is when the gecko ignores my presence. Timid is when the gecko tries to stay away from me when I approach it.
 
