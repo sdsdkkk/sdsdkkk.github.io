@@ -50,7 +50,7 @@ I recorded the aggressiveness of the geckos in the behavior column, where I cate
 
 I only encountered one instance of an aggressive gecko, and that one I identified as _Hemidactylus frenatus_. This is consistent with information I get from various sources that _Hemidactylus frenatus_ is [a territorial and aggressive gecko species](https://animaldiversity.org/accounts/Hemidactylus_frenatus/). Most of them are neutral though, and some are quite timid when I encountered it. But for those I identified as _Lepidodactylus lugubris_, I found all of them timid.
 
-I recorded the gecko's growth phase in the size column. I only put full-grown and juvenile as the values there, but in hindsight I should've labeled the hatchling and the very young ones as baby instead. I encountered a vew hatchling and very young ones, but I labeled them as juveniles. Also, I'm sure there were a few instances where I mistook adult _Lepidodactylus lugubris_ as juvenile _Hemidactylus frenatus_ and mislabeled them.
+I recorded the gecko's growth phase in the size column. I only put full-grown and juvenile as the values there, but in hindsight I should've labeled the hatchling and the very young ones as baby instead. I encountered a few hatchlings and very young ones, but I labeled them as juveniles. Also, I'm sure there were a few instances where I mistook adult _Lepidodactylus lugubris_ as juvenile _Hemidactylus frenatus_ and mislabeled them.
 
 ![Growth phase](/images/posts/gecko-growth.png)
 
