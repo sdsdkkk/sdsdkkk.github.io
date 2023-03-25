@@ -24,7 +24,7 @@ This realization invalidates my data collection method, since when I started I a
 
 Only after stumbling upon [this video](https://www.youtube.com/watch?v=L4CHEge5wlc) by Clint's Reptiles on YouTube I learned about mourning geckos. The geckos look pretty familiar to me as I noticed some of the geckos I encountered so far that resides around certain areas in the house have smaller head-to-body size ratio, darker color, and more timid. So I checked their range and found that mourning geckos are quite common around my area.
 
-I also learned that _Hemidactylus frenatus_ and _Lepidodactylus lugubris_ can live close by but won't occupy the exact same territory, as _Hemidactylus frenatus_ tend to be very territorial and aggressive towards other gecko species. So I found another supporting evidence that I have two gecko species in the house: _Hemidactylus frenatus_ around the areas deeper into the hosue and _Lepidodactylus lugubris_ around the areas bordering the yard.
+I also learned that _Hemidactylus frenatus_ and _Lepidodactylus lugubris_ can live close by but won't occupy the exact same territory, as _Hemidactylus frenatus_ tend to be very territorial and aggressive towards other gecko species. So I found another supporting evidence that I have two gecko species in the house: _Hemidactylus frenatus_ around the areas deeper into the house and _Lepidodactylus lugubris_ around the areas bordering the yard.
 
 I took note of it, but I didn't update my data collection strategy yet to take into account the fact that I have been observing two different gecko species just yet because I haven't got that many data points in my observation records and I might still need to learn more about them in order to be able to come up with a better research plan.
 
@@ -36,7 +36,7 @@ The following is the chart of the number of sightings for each month up to Febru
 
 ![Monthly sightings](/images/posts/gecko-monthly-sighting-occurences.png)
 
-I didn't put any tracker on the geckos like a proper biologists usually do when observing wild animal populations. So I estimate the size of the gecko population in the house based on the number of sources from where I heard their voices, where their droppings are, and how many I can see at the same time.
+I didn't put any tracker on the geckos like a proper biologists usually do when observing wild animal populations. So I estimated the size of the gecko population in the house based on the number of sources from where I heard their voices, where their droppings are, and how many I can see at the same time.
 
 One shortcoming of the data collection method I used is that it doesn't record most of those because it was initially meant just for taking notes of each individual gecko's reactions to the sounds I used on them. Therefore, the only meaningful data I collected in the dataset that can be used to estimate the size of the gecko population around the house is how many can be seen at the same time.
 
