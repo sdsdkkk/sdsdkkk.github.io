@@ -3,7 +3,7 @@ layout: post
 title: "Studying Geckos"
 date: 2023-03-22 00:00:00
 description: Gecko observation report
-tags: Zoology DataScience
+tags: Biology DataScience
 ---
 
 When the pandemic started in 2020, I started spending most of my time at home in late March as we're forced to go into WFH. After a while, I noticed that I encountered geckos quite often in the house. Sometimes I could see them, but many times I just heard their voices and cleaned up their droppings.
