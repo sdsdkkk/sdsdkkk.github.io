@@ -89,7 +89,7 @@ $$
 
 Which is the same with our calculation of $$log_{2} 26 = 4.7$$ as before assuming all characters have equal probabilities of appearing in the message.
 
-Let's suppose we have a 10-character message $$HAHAHAHAHA$$. If a random character is picked from the message, $$P(H) = \frac{1}{2}$$, $$P(A) = \frac{1}{2}$$, and for the reset of characters $$P = 0$$ as they don't appear at all in the message. With the knowledge that the message only contains the characters A and H, we can represent the message with less bits if we consider the characters $$x$$ in the message to be $$x \in \{A, H\}$$.
+Let's suppose we have a 10-character message $$HAHAHAHAHA$$. If a random character is picked from the message, $$P(H) = \frac{1}{2}$$, $$P(A) = \frac{1}{2}$$, and for the rest of characters $$P = 0$$ as they don't appear at all in the message. With the knowledge that the message only contains the characters A and H, we can represent the message with less bits if we consider the characters $$x$$ in the message to be $$x \in \{A, H\}$$.
 
 $$
 log_{2} 2 = 1
