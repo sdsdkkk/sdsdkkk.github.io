@@ -18,7 +18,7 @@ Avoid making one big network environment that's accessible to everyone when you 
 
 As a horizontal team, when designing a system to be used by a large organization with compartmentalized business units, don't assume your system components will always communicate with each other through an internal network. Design it for communication through the Internet.
 
-## Minimize Scaling Dependencies Between Two or More compartmentalized Systems
+## Minimize Scaling Dependencies Between Two or More Compartmentalized Systems
 
 Design your system so that if one business vertical needs to scale, only the components within the scope of that business vertical's cluster need to be scaled. If it depends on a cluster owned by another business vertical (or a shared cluster managed by a horizontal team), it will add more communication overhead and more people to be involved during the scaling coordination which will slow down your scaling process.
 
