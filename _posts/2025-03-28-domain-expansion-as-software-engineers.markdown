@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Domain Expansion for Software ENgineers"
+title: "Domain Expansion for Software Engineers"
 date: 2025-03-28 00:00:00
 description: The difference about learning new programming frameworks and learning entirely new domains
 tags: SoftwareEngineering Networks Security
