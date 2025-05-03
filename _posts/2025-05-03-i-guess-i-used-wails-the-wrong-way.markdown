@@ -8,7 +8,7 @@ tags: SoftwareEngineering Random
 
 Recently, I was looking at [Wails](https://wails.io/) as an option to build a hobby project I was thinking about. I planned to build a desktop application that can take a webcam input stream, and based on the movement of the person captured in the camera, then move some objects rendered by the application on the screen.
 
-Considering that at work my team has been using Wails to develop a desktop GUI client for one of our internal platforms that needs to alter some settings in the client machine when used. Many of the users of this platform aren't technical users, hence we need to provide GUI. Also, the users are using different operating systems on their machines, so we need to be able to support Linux, Mac OS, and Windows.
+At work, my team has been using Wails to develop a desktop GUI client for one of our internal platforms that needs to alter some settings in the client machine when used. Many of the users of this platform aren't technical users, hence we need to provide GUI. Also, the users are using different operating systems on their machines, so we need to be able to support Linux, Mac OS, and Windows.
 
 Initially, we built the front-end using [Electron](https://www.electronjs.org/). But as we started using Golang more for our back-end, we decided to move to Wails so we could reuse the server code written in Golang in our client implementation.
 
