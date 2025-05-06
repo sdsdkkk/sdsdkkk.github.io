@@ -51,7 +51,6 @@
 
   &-post {
     display: flex;
-    justify-content: space-between;
     padding: 5px 0;
 
     &-title {
@@ -71,8 +70,9 @@
 
     &-meta {
       color: $default-tint;
-      text-align: right;
+      text-align: left;
       white-space: nowrap;
+      width: 125px;
     }
 
     &:hover,
