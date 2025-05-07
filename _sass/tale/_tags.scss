@@ -73,6 +73,7 @@
       text-align: left;
       white-space: nowrap;
       width: 125px;
+      flex-shrink: 0;
     }
 
     &:hover,
