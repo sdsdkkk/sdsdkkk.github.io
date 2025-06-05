@@ -66,7 +66,7 @@ Up until I left the company, it seemed to have solved most of our phishing probl
 
 # What Happened After I Left
 
-I'd never heard about Bukalapak facing a phishing crisis at such a large scale after I left, so I simply assumed that the anti-phishing system I developed and set up was sufficient. Probably they needed to add minor adjustments here and there, especially on the phishing site detection logic and the module that sends phishing site takedown requests to hosing providers.
+I'd never heard about Bukalapak facing a phishing crisis at such a large scale after I left, so I simply assumed that the anti-phishing system I developed and set up was sufficient. Probably they needed to add minor adjustments here and there, especially on the phishing site detection logic and the module that sends phishing site takedown requests to hosting providers.
 
 The Indonesian government issued a regulation that banned local e-commerce sites from providing e-wallet features such as BukaDompet some time after I left, so in the end the BukaDompet balance of the users was moved to DANA, an Indonesian e-wallet company that's quite close to Bukalapak since they are both part of the EMTEK Group's investment portfolio. This shifted the responsibility to manage and secure the wallet balance to DANA, so I think Bukalapak users should be at less risk of getting targeted by phishers after that.
 
