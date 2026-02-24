@@ -172,7 +172,7 @@ For more information on this free incident handling, management
 and tracking system please see: http://aris.securityfocus.com
 ```
 
-I cleaned up the HTML code of the "defaced Google" from the email and opened it as a HTML file on a browser to see what the person saw back in 7 January 2003 when they thought Google was hacked. Here it is.
+I cleaned up the HTML code of the "defaced Google" from the email and opened it as a HTML file on a browser to see what the person saw back on 7 January 2003 when they thought Google was hacked. Here it is.
 
 ![The defaced "Google" homepage](/images/posts/antihackerlink-2003-hack.png)
 
