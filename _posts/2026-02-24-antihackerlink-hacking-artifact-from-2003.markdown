@@ -18,7 +18,7 @@ Both of them used to be in a local underground hacking group called AntiHackerli
 
 I don't have any personal ties with them, aside from having the opportunity to meet Juny Maimun once in 2012 where he was together with the late Arif Wicaksono, another AntiHackerlink member known with the handle `sakitjiwa` (which means "mental illness" in English). But one of the people who taught me cybersecurity (and mentored me in many ways) used to hang out in the same underground community as them. I'm not going to name the person here since they never even mentioned the name of AntiHackerlink community or the handle they used during their illegal hacking days (I think I might have figured it out already though).
 
-What I meant to do in this post is to document a hack by AntiHackerlink in 2003, as I happened to stumbled upon an evidence of the hack happening in [an old mailing list archive](https://marc.info/?l=incidents&m=104198322804808&w=2).
+What I meant to do in this post is to document a hack by AntiHackerlink in 2003, as I happened to stumble upon an evidence of the hack happening in [an old mailing list archive](https://marc.info/?l=incidents&m=104198322804808&w=2).
 
 The following is the full text of the archived message.
 
@@ -195,3 +195,4 @@ I think what I found was the remains from the exact story they used as a case st
 [The DALnet IRC Network](https://www.dal.net/)
 
 ['Re: Possible google hack'](https://marc.info/?l=incidents&m=104198322804808&w=2)
+
